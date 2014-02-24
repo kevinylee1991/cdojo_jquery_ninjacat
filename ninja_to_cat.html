@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<title>Ninja to Cat</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="ninja_to_cat.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('img').click(function(){
+				console.log('alt-src value is', $(this).attr('alt-src'));
+			})
+
+			$('img').click(function(){
+				$(this).attr('placeholder', $(this).attr('src'));
+				$(this).attr('src', $(this).attr('alt-src'));
+				$(this).attr('alt-src', $(this).attr('placeholder'));
+			})
+		})//end of doc.ready
+	</script>
+</head>
+<body>
+	<img src="ninja0.png" alt-src="cat0.png" placeholder="">
+	<img src="ninja1.png" alt-src="cat1.png" placeholder="">
+	<img src="ninja2.png" alt-src="cat2.png" placeholder="">
+	<img src="ninja3.png" alt-src="cat3.png" placeholder="">
+	<img src="ninja4.png" alt-src="cat4.png" placeholder="">
+</body>
+</html>
